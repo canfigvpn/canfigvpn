@@ -1,1 +1,203 @@
-I3Byb2ZpbGUtdGl0bGU6IPCfjJ9AS29oZV95YWtoMfCfjJ8NCiNwcm9maWxlLXVwZGF0ZS1pbnRlcnZhbDogMQ0KI3N1YnNjcmlwdGlvbi11c2VyaW5mbzogdXBsb2FkPTA7IGRvd25sb2FkPTA7IHRvdGFsPTEsMDsgZXhwaXJlPTEsMA0KI3Byb2ZpbGUtd2ViLXBhZ2UtdXJsOiBodHRwczovL2dpdGh1Yi5jb20vY2FuZmlndnBuL2NhbmZpZ3Zwbi9uZXcvbWFpbg0KDQp7DQogICJsb2ciOiB7DQogICAgImxldmVsIjogImRlYnVnIiwNCiAgICAib3V0cHV0IjogImJveC5sb2ciLA0KICAgICJ0aW1lc3RhbXAiOiB0cnVlDQogIH0sDQogICJkbnMiOiB7DQogICAgInNlcnZlcnMiOiBbDQogICAgICB7DQogICAgICAgICJ0YWciOiAiZG5zLXJlbW90ZSIsDQogICAgICAgICJhZGRyZXNzIjogInVkcDovLzEuMS4xLjEiLA0KICAgICAgICAiYWRkcmVzc19yZXNvbHZlciI6ICJkbnMtZGlyZWN0IiwNCiAgICAgICAgInN0cmF0ZWd5IjogImlwdjRfb25seSINCiAgICAgIH0sDQogICAgICB7DQogICAgICAgICJ0YWciOiAiZG5zLXRyaWNrLWRpcmVjdCIsDQogICAgICAgICJhZGRyZXNzIjogImh0dHBzOi8vc2t5LnJldGhpbmtkbnMuY29tLyIsDQogICAgICAgICJzdHJhdGVneSI6ICJpcHY0X29ubHkiLA0KICAgICAgICAiZGV0b3VyIjogImRpcmVjdC1mcmFnbWVudCINCiAgICAgIH0sDQogICAgICB7DQogICAgICAgICJ0YWciOiAiZG5zLWRpcmVjdCIsDQogICAgICAgICJhZGRyZXNzIjogIjEuMS4xLjEiLA0KICAgICAgICAiYWRkcmVzc19yZXNvbHZlciI6ICJkbnMtbG9jYWwiLA0KICAgICAgICAic3RyYXRlZ3kiOiAiaXB2NF9vbmx5IiwNCiAgICAgICAgImRldG91ciI6ICJkaXJlY3QiDQogICAgICB9LA0KICAgICAgew0KICAgICAgICAidGFnIjogImRucy1sb2NhbCIsDQogICAgICAgICJhZGRyZXNzIjogImxvY2FsIiwNCiAgICAgICAgImRldG91ciI6ICJkaXJlY3QiDQogICAgICB9LA0KICAgICAgew0KICAgICAgICAidGFnIjogImRucy1ibG9jayIsDQogICAgICAgICJhZGRyZXNzIjogInJjb2RlOi8vc3VjY2VzcyINCiAgICAgIH0NCiAgICBdLA0KICAgICJydWxlcyI6IFsNCiAgICAgIHsNCiAgICAgICAgImRvbWFpbiI6ICJjb25zb2xlLnRlem9sbWFya2V0aW5nLmNvbSIsDQogICAgICAgICJzZXJ2ZXIiOiAiZG5zLWRpcmVjdCINCiAgICAgIH0sDQogICAgICB7DQogICAgICAgICJkb21haW5fc3VmZml4IjogIi5pciIsDQogICAgICAgICJnZW9zaXRlIjogImlyIiwNCiAgICAgICAgInNlcnZlciI6ICJkbnMtZGlyZWN0Ig0KICAgICAgfSwNCiAgICAgIHsNCiAgICAgICAgImRvbWFpbiI6ICJjcC5jbG91ZGZsYXJlLmNvbSIsDQogICAgICAgICJzZXJ2ZXIiOiAiZG5zLXJlbW90ZSIsDQogICAgICAgICJyZXdyaXRlX3R0bCI6IDMwMDANCiAgICAgIH0NCiAgICBdLA0KICAgICJmaW5hbCI6ICJkbnMtcmVtb3RlIiwNCiAgICAic3RhdGljX2lwcyI6IHsNCiAgICAgICJza3kucmV0aGlua2Rucy5jb20iOiBbDQogICAgICAgICIyNC4wLjAuNTMiLA0KICAgICAgICAiMjQuMC4wLjU0IiwNCiAgICAgICAgIjI0LjAuMC41NSINCiAgICAgIF0NCiAgICB9LA0KICAgICJpbmRlcGVuZGVudF9jYWNoZSI6IHRydWUNCiAgfSwNCiAgImluYm91bmRzIjogWw0KICAgIHsNCiAgICAgICJ0eXBlIjogInR1biIsDQogICAgICAidGFnIjogInR1bi1pbiIsDQogICAgICAibXR1IjogOTAwMCwNCiAgICAgICJpbmV0NF9hZGRyZXNzIjogIjE3Mi4xOS4wLjEvMjgiLA0KICAgICAgImluZXQ2X2FkZHJlc3MiOiAiZmRmZTpkY2JhOjk4NzY6OjEvMTI2IiwNCiAgICAgICJhdXRvX3JvdXRlIjogdHJ1ZSwNCiAgICAgICJzdHJpY3Rfcm91dGUiOiB0cnVlLA0KICAgICAgImVuZHBvaW50X2luZGVwZW5kZW50X25hdCI6IHRydWUsDQogICAgICAic3RhY2siOiAiZ3Zpc29yIiwNCiAgICAgICJzbmlmZiI6IHRydWUsDQogICAgICAic25pZmZfb3ZlcnJpZGVfZGVzdGluYXRpb24iOiB0cnVlDQogICAgfSwNCiAgICB7DQogICAgICAidHlwZSI6ICJtaXhlZCIsDQogICAgICAidGFnIjogIm1peGVkLWluIiwNCiAgICAgICJsaXN0ZW4iOiAiMTI3LjAuMC4xIiwNCiAgICAgICJsaXN0ZW5fcG9ydCI6IDIzMzQsDQogICAgICAic25pZmYiOiB0cnVlLA0KICAgICAgInNuaWZmX292ZXJyaWRlX2Rlc3RpbmF0aW9uIjogdHJ1ZQ0KICAgIH0sDQogICAgew0KICAgICAgInR5cGUiOiAiZGlyZWN0IiwNCiAgICAgICJ0YWciOiAiZG5zLWluIiwNCiAgICAgICJsaXN0ZW4iOiAiMTI3LjAuMC4xIiwNCiAgICAgICJsaXN0ZW5fcG9ydCI6IDY0NTANCiAgICB9DQogIF0sDQogICJvdXRib3VuZHMiOiBbDQogICAgew0KICAgICAgInR5cGUiOiAic2VsZWN0b3IiLA0KICAgICAgInRhZyI6ICJzZWxlY3QiLA0KICAgICAgIm91dGJvdW5kcyI6IFsNCiAgICAgICAgImF1dG8iLA0KICAgICAgICAi8J+HqfCfh6ouaVAuMTAwIMKnIDAiDQogICAgICBdLA0KICAgICAgImRlZmF1bHQiOiAiYXV0byINCiAgICB9LA0KICAgIHsNCiAgICAgICJ0eXBlIjogInVybHRlc3QiLA0KICAgICAgInRhZyI6ICJhdXRvIiwNCiAgICAgICJvdXRib3VuZHMiOiBbDQogICAgICAgICLwn4ep8J+Hqi5pUC4xMDAgwqcgMCINCiAgICAgIF0sDQogICAgICAidXJsIjogImh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9nZW5lcmF0ZV8yMDQiLA0KICAgICAgImludGVydmFsIjogIjFtMHMiLA0KICAgICAgImlkbGVfdGltZW91dCI6ICIxMG0wcyINCiAgICB9LA0KICAgIHsNCiAgICAgICJ0eXBlIjogInZsZXNzIiwNCiAgICAgICJ0YWciOiAi8J+HqfCfh6ouaVAuMTAwIMKnIDAiLA0KICAgICAgInNlcnZlciI6ICJjb25zb2xlLnRlem9sbWFya2V0aW5nLmNvbSIsDQogICAgICAic2VydmVyX3BvcnQiOiA0NDMsDQogICAgICAidXVpZCI6ICJhOGJjYzk0YS0zNTNkLTQ5ZDMtODg0YS03Y2FjNzg2OTAxNGMiLA0KICAgICAgInRyYW5zcG9ydCI6IHsNCiAgICAgICAgInR5cGUiOiAiaHR0cCIsDQogICAgICAgICJob3N0IjogImdyZWVucGVwcGVyLmlyIiwNCiAgICAgICAgInBhdGgiOiAiLyIsDQogICAgICAgICJtZXRob2QiOiAiR0VUIg0KICAgICAgfSwNCiAgICAgICJwYWNrZXRfZW5jb2RpbmciOiAiIg0KICAgIH0sDQogICAgew0KICAgICAgInR5cGUiOiAiZG5zIiwNCiAgICAgICJ0YWciOiAiZG5zLW91dCINCiAgICB9LA0KICAgIHsNCiAgICAgICJ0eXBlIjogImRpcmVjdCIsDQogICAgICAidGFnIjogImRpcmVjdCINCiAgICB9LA0KICAgIHsNCiAgICAgICJ0eXBlIjogImRpcmVjdCIsDQogICAgICAidGFnIjogImRpcmVjdC1mcmFnbWVudCIsDQogICAgICAidGxzX2ZyYWdtZW50Ijogew0KICAgICAgICAiZW5hYmxlZCI6IHRydWUsDQogICAgICAgICJzaXplIjogIjEtNTAwIiwNCiAgICAgICAgInNsZWVwIjogIjAtNTAwIg0KICAgICAgfQ0KICAgIH0sDQogICAgew0KICAgICAgInR5cGUiOiAiZGlyZWN0IiwNCiAgICAgICJ0YWciOiAiYnlwYXNzIg0KICAgIH0sDQogICAgew0KICAgICAgInR5cGUiOiAiYmxvY2siLA0KICAgICAgInRhZyI6ICJibG9jayINCiAgICB9DQogIF0sDQogICJyb3V0ZSI6IHsNCiAgICAiZ2VvaXAiOiB7DQogICAgICAicGF0aCI6ICJnZW8tYXNzZXRzL3NhZ2VybmV0LXNpbmctZ2VvaXAtZ2VvaXAuZGIiDQogICAgfSwNCiAgICAiZ2Vvc2l0ZSI6IHsNCiAgICAgICJwYXRoIjogImdlby1hc3NldHMvc2FnZXJuZXQtc2luZy1nZW9zaXRlLWdlb3NpdGUuZGIiDQogICAgfSwNCiAgICAicnVsZXMiOiBbDQogICAgICB7DQogICAgICAgICJpbmJvdW5kIjogImRucy1pbiIsDQogICAgICAgICJvdXRib3VuZCI6ICJkbnMtb3V0Ig0KICAgICAgfSwNCiAgICAgIHsNCiAgICAgICAgInBvcnQiOiA1MywNCiAgICAgICAgIm91dGJvdW5kIjogImRucy1vdXQiDQogICAgICB9LA0KICAgICAgew0KICAgICAgICAiY2xhc2hfbW9kZSI6ICJEaXJlY3QiLA0KICAgICAgICAib3V0Ym91bmQiOiAiZGlyZWN0Ig0KICAgICAgfSwNCiAgICAgIHsNCiAgICAgICAgImNsYXNoX21vZGUiOiAiR2xvYmFsIiwNCiAgICAgICAgIm91dGJvdW5kIjogInNlbGVjdCINCiAgICAgIH0sDQogICAgICB7DQogICAgICAgICJkb21haW5fc3VmZml4IjogIi5pciIsDQogICAgICAgICJnZW9zaXRlIjogImlyIiwNCiAgICAgICAgImdlb2lwIjogImlyIiwNCiAgICAgICAgIm91dGJvdW5kIjogImJ5cGFzcyINCiAgICAgIH0NCiAgICBdLA0KICAgICJmaW5hbCI6ICJzZWxlY3QiLA0KICAgICJhdXRvX2RldGVjdF9pbnRlcmZhY2UiOiB0cnVlLA0KICAgICJvdmVycmlkZV9hbmRyb2lkX3ZwbiI6IHRydWUNCiAgfSwNCiAgImV4cGVyaW1lbnRhbCI6IHsNCiAgICAiY2FjaGVfZmlsZSI6IHsNCiAgICAgICJlbmFibGVkIjogdHJ1ZSwNCiAgICAgICJwYXRoIjogImNsYXNoLmRiIg0KICAgIH0sDQogICAgImNsYXNoX2FwaSI6IHsNCiAgICAgICJleHRlcm5hbF9jb250cm9sbGVyIjogIjEyNy4wLjAuMTo2NzU2IiwNCiAgICAgICJzZWNyZXQiOiAiNHRjVE00eDM4QXhhSm1GMiINCiAgICB9DQogIH0NCn0=
+#profile-title: 🌟@Kohe_yakh1🌟
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=1,0; expire=1,0
+#profile-web-page-url: https://github.com/canfigvpn/canfigvpn/new/main
+
+{
+  "log": {
+    "level": "debug",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "strategy": "ipv4_only",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": "console.tezolmarketing.com",
+        "server": "dns-direct"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "24.0.0.53",
+        "24.0.0.54",
+        "24.0.0.55"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "gvisor",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇩🇪.iP.100 § 0"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇩🇪.iP.100 § 0"
+      ],
+      "url": "http://www.google.com/generate_204",
+      "interval": "1m0s",
+      "idle_timeout": "10m0s"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪.iP.100 § 0",
+      "server": "console.tezolmarketing.com",
+      "server_port": 443,
+      "uuid": "a8bcc94a-353d-49d3-884a-7cac7869014c",
+      "transport": {
+        "type": "http",
+        "host": "greenpepper.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
+    },
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "4tcTM4x38AxaJmF2"
+    }
+  }
+}
