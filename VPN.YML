@@ -17,9 +17,11 @@
     "ipv6": true,
     "respect-rules": true,
     "nameserver": [
+      "https://1.1.1.1/dns-query",
       "https://8.8.8.8/dns-query"
     ],
     "proxy-server-nameserver": [
+      "1.1.1.1",
       "8.8.8.8"
     ],
     "enhanced-mode": "fake-ip",
@@ -45,33 +47,18 @@
     "parse-pure-ip": true,
     "sniff": {
       "HTTP": {
-        "ports": [
-          80,
-          8080,
-          8880,
-          2052,
-          2082,
-          2086,
-          2095
-        ],
+        "ports": [80,8080,8880,2052,2082,2086,2095],
         "override-destination": false
       },
       "TLS": {
-        "ports": [
-          443,
-          8443,
-          2053,
-          2083,
-          2087,
-          2096
-        ],
+        "ports": [443,8443,2053,2083,2087,2096],
         "override-destination": false
       }
     }
   },
   "proxies": [
     {
-      "name": "💦 1 - Trojan - Domain - 8443 (primary)",
+      "name": "💦 Trojan - 8443",
       "type": "trojan",
       "server": "lingering-wind-6f15.erfan-3rfan.workers.dev",
       "port": 8443,
@@ -82,17 +69,17 @@
         "path": "/trjSAQzsERFKlLv4o2/MjAuMTc0LjE1LjIyNg==",
         "headers": {
           "host": "lingering-wind-6f15.erfan-3rfan.workers.dev",
-          "origin": "https://lingering-wind-6f15.erfan-3rfan.workers.dev"
+          "origin": "https://lingering-wind-6f15.erfan-3rfan.workers.dev",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "accept-language": "en-US,en;q=0.9"
         },
         "max-early-data": 2560,
         "early-data-header-name": "Sec-WebSocket-Protocol"
       },
       "sni": "lingering-wind-6f15.erfan-3rfan.workers.dev",
-      "alpn": [
-        "h2",
-        "http/1.1"
-      ],
+      "alpn": ["h2","http/1.1"],
       "client-fingerprint": "chrome",
+      "tls-version": "1.3",
       "skip-cert-verify": false
     }
   ],
@@ -101,18 +88,8 @@
       "name": "✅ Selector",
       "type": "select",
       "proxies": [
-        "💦 Best Ping 💥",
-        "💦 1 - Trojan - Domain - 8443 (primary)"
-      ]
-    },
-    {
-      "name": "💦 Best Ping 💥",
-      "type": "url-test",
-      "url": "http://www.google.com/generate_204",
-      "interval": 30,
-      "tolerance": 50,
-      "proxies": [
-        "💦 1 - Trojan - Domain - 8443 (primary)"
+        "💦 Trojan - 8443",
+        "DIRECT"
       ]
     }
   ],
