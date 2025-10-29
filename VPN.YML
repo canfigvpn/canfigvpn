@@ -58,9 +58,9 @@
   },
   "proxies": [
     {
-      "name": "💦 Trojan - 8443",
+      "name": "💦-Trojan-8443",
       "type": "trojan",
-      "server": "lingering-wind-6f15.erfan-3rfan.workers.dev",
+      "server": "8.6.112.0",
       "port": 8443,
       "password": "bpb-trojan",
       "network": "ws",
@@ -73,7 +73,7 @@
           "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           "accept-language": "en-US,en;q=0.9"
         },
-        "max-early-data": 2560,
+        "max-early-data": 128,
         "early-data-header-name": "Sec-WebSocket-Protocol"
       },
       "sni": "lingering-wind-6f15.erfan-3rfan.workers.dev",
@@ -85,10 +85,10 @@
   ],
   "proxy-groups": [
     {
-      "name": "✅ Selector",
+      "name": "💦 Trojan 💦",
       "type": "select",
       "proxies": [
-        "💦 Trojan - 8443",
+        "💦-Trojan-8443",
         "DIRECT"
       ]
     }
