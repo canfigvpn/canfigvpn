@@ -96,7 +96,7 @@
   "rules": [
     "AND,((IP-CIDR,8.8.8.8/32),(DST-PORT,53)),DIRECT",
     "NETWORK,udp,REJECT",
-    "MATCH,✅ Selector"
+    "MATCH,💦 Trojan 💦"
   ],
   "ntp": {
     "enable": true,
