@@ -1,0 +1,74 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: warning
+ipv6: true
+find-process-mode: always
+unified-delay: true
+external-controller: 0.0.0.0:9090
+secret: ''
+
+profile:
+  store-selected: true
+  store-fake-ip: false
+
+dns:
+  enable: true
+  ipv6: true
+  prefer-h3: true
+  respect-rules: false
+  use-system-hosts: true
+  cache-algorithm: arc
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://dns.radargame.com/dns-query
+    - https://dns.lagslayer.net/dns-query
+    - https://dns.lagzero.net/dns-query
+  fallback:
+    - 5.160.132.222
+    - 5.160.132.221
+  fake-ip-filter:
+    - '*.lan'
+    - 'localhost'
+    - '*.local'
+    - '*.example'
+    - '*.invalid'
+    - 'time.*.com'
+    - 'ntp.*.com'
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30
+
+proxies:
+  - name: "🎮 Game Mode"
+    type: http
+    server: 127.0.0.1
+    port: 8080
+
+proxy-groups:
+  - name: 🔀 Mode
+    type: select
+    proxies:
+      - DIRECT
+      - 🎮 Game Mode
+
+rules:
+  - GEOIP,IR,DIRECT
+  - MATCH,🔀 Mode
