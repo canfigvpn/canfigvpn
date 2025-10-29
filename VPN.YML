@@ -60,7 +60,7 @@
     {
       "name": "💦-Trojan-8443",
       "type": "trojan",
-      "server": "8.6.112.0",
+      "server": "www.speedtest.net",
       "port": 8443,
       "password": "bpb-trojan",
       "network": "ws",
