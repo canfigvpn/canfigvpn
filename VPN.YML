@@ -1,0 +1,130 @@
+{
+  "mixed-port": 7890,
+  "redir-port": 7892,
+  "ipv6": true,
+  "allow-lan": true,
+  "mode": "rule",
+  "log-level": "info",
+  "keep-alive-interval": 30,
+  "unified-delay": false,
+  "mux": {
+    "enabled": true,
+    "concurrency": 16
+  },
+  "dns": {
+    "enable": true,
+    "listen": "0.0.0.0:1053",
+    "ipv6": true,
+    "respect-rules": true,
+    "nameserver": [
+      "https://8.8.8.8/dns-query"
+    ],
+    "proxy-server-nameserver": [
+      "8.8.8.8"
+    ],
+    "enhanced-mode": "fake-ip",
+    "fake-ip-range": "198.18.0.1/16"
+  },
+  "tun": {
+    "enable": true,
+    "stack": "system",
+    "auto-route": true,
+    "auto-redirect": true,
+    "auto-detect-interface": true,
+    "dns-hijack": [
+      "any:53",
+      "198.18.0.2:53"
+    ],
+    "device": "utun0",
+    "mtu": 9000,
+    "strict-route": true
+  },
+  "sniffer": {
+    "enable": true,
+    "force-dns-mapping": true,
+    "parse-pure-ip": true,
+    "sniff": {
+      "HTTP": {
+        "ports": [
+          80,
+          8080,
+          8880,
+          2052,
+          2082,
+          2086,
+          2095
+        ],
+        "override-destination": false
+      },
+      "TLS": {
+        "ports": [
+          443,
+          8443,
+          2053,
+          2083,
+          2087,
+          2096
+        ],
+        "override-destination": false
+      }
+    }
+  },
+  "proxies": [
+    {
+      "name": "💦 1 - Trojan - Domain - 8443 (primary)",
+      "type": "trojan",
+      "server": "lingering-wind-6f15.erfan-3rfan.workers.dev",
+      "port": 8443,
+      "password": "bpb-trojan",
+      "network": "ws",
+      "udp": true,
+      "ws-opts": {
+        "path": "/trjSAQzsERFKlLv4o2/MjAuMTc0LjE1LjIyNg==",
+        "headers": {
+          "host": "lingering-wind-6f15.erfan-3rfan.workers.dev",
+          "origin": "https://lingering-wind-6f15.erfan-3rfan.workers.dev"
+        },
+        "max-early-data": 2560,
+        "early-data-header-name": "Sec-WebSocket-Protocol"
+      },
+      "sni": "lingering-wind-6f15.erfan-3rfan.workers.dev",
+      "alpn": [
+        "h2",
+        "http/1.1"
+      ],
+      "client-fingerprint": "chrome",
+      "skip-cert-verify": false
+    }
+  ],
+  "proxy-groups": [
+    {
+      "name": "✅ Selector",
+      "type": "select",
+      "proxies": [
+        "💦 Best Ping 💥",
+        "💦 1 - Trojan - Domain - 8443 (primary)"
+      ]
+    },
+    {
+      "name": "💦 Best Ping 💥",
+      "type": "url-test",
+      "url": "http://www.google.com/generate_204",
+      "interval": 30,
+      "tolerance": 50,
+      "proxies": [
+        "💦 1 - Trojan - Domain - 8443 (primary)"
+      ]
+    }
+  ],
+  "rules": [
+    "AND,((IP-CIDR,8.8.8.8/32),(DST-PORT,53)),DIRECT",
+    "NETWORK,udp,REJECT",
+    "MATCH,✅ Selector"
+  ],
+  "ntp": {
+    "enable": true,
+    "server": "time.apple.com",
+    "port": 123,
+    "interval": 30
+  }
+}
