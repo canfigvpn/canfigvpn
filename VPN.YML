@@ -1,107 +1,173 @@
-{
-  "mixed-port": 7890,
-  "redir-port": 7892,
-  "ipv6": true,
-  "allow-lan": true,
-  "mode": "rule",
-  "log-level": "info",
-  "keep-alive-interval": 30,
-  "unified-delay": false,
-  "mux": {
-    "enabled": true,
-    "concurrency": 16
-  },
-  "dns": {
-    "enable": true,
-    "listen": "0.0.0.0:1053",
-    "ipv6": true,
-    "respect-rules": true,
-    "nameserver": [
-      "https://1.1.1.1/dns-query",
-      "https://8.8.8.8/dns-query"
-    ],
-    "proxy-server-nameserver": [
-      "1.1.1.1",
-      "8.8.8.8"
-    ],
-    "enhanced-mode": "fake-ip",
-    "fake-ip-range": "198.18.0.1/16"
-  },
-  "tun": {
-    "enable": true,
-    "stack": "system",
-    "auto-route": true,
-    "auto-redirect": true,
-    "auto-detect-interface": true,
-    "dns-hijack": [
-      "any:53",
-      "198.18.0.2:53"
-    ],
-    "device": "utun0",
-    "mtu": 9000,
-    "strict-route": true
-  },
-  "sniffer": {
-    "enable": true,
-    "force-dns-mapping": true,
-    "parse-pure-ip": true,
-    "sniff": {
-      "HTTP": {
-        "ports": [80,8080,8880,2052,2082,2086,2095],
-        "override-destination": false
-      },
-      "TLS": {
-        "ports": [443,8443,2053,2083,2087,2096],
-        "override-destination": false
-      }
-    }
-  },
-  "proxies": [
-    {
-      "name": "💦-Trojan-8443",
-      "type": "trojan",
-      "server": "www.speedtest.net",
-      "port": 8443,
-      "password": "bpb-trojan",
-      "network": "ws",
-      "udp": true,
-      "ws-opts": {
-        "path": "/trjSAQzsERFKlLv4o2/MjAuMTc0LjE1LjIyNg==",
-        "headers": {
-          "host": "lingering-wind-6f15.erfan-3rfan.workers.dev",
-          "origin": "https://lingering-wind-6f15.erfan-3rfan.workers.dev",
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "accept-language": "en-US,en;q=0.9"
-        },
-        "max-early-data": 128,
-        "early-data-header-name": "Sec-WebSocket-Protocol"
-      },
-      "sni": "lingering-wind-6f15.erfan-3rfan.workers.dev",
-      "alpn": ["h2","http/1.1"],
-      "client-fingerprint": "chrome",
-      "tls-version": "1.3",
-      "skip-cert-verify": false
-    }
-  ],
-  "proxy-groups": [
-    {
-      "name": "💦 Trojan 💦",
-      "type": "select",
-      "proxies": [
-        "💦-Trojan-8443",
-        "DIRECT"
-      ]
-    }
-  ],
-  "rules": [
-    "AND,((IP-CIDR,8.8.8.8/32),(DST-PORT,53)),DIRECT",
-    "NETWORK,udp,REJECT",
-    "MATCH,💦 Trojan 💦"
-  ],
-  "ntp": {
-    "enable": true,
-    "server": "time.apple.com",
-    "port": 123,
-    "interval": 30
-  }
-}
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  nameserver:
+    - 1.1.1.1
+
+proxies:
+  # 🇺🇸 آمریکا - لاس وگاس
+  - name: "🇺🇸 USA - Las Vegas"
+    type: wireguard
+    server: 104.243.33.207
+    port: 40496
+    ip: 10.230.14.182/16
+    private-key: "gLu+G/TYel5lu+TUSRFSprwp6vzN/vrfPHITfkmv0wM="
+    public-key: "WBCvF75WJP1FLXzIvSvXsc3MvQ/jw8r9iEh99z6SgwQ="
+    udp: true
+    mtu: 1280
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+  # 🇺🇸 آمریکا - نیویورک
+  - name: "🇺🇸 USA - New York"
+    type: wireguard
+    server: 104.128.72.21
+    port: 11547
+    ip: 10.223.15.74/16
+    private-key: "xqH7L4WLl2JAC82jTrcH7TdtvBwQC5yxjMZdoVbqRcU="
+    public-key: "McfgxW5DYUaUio0nSFpOyVC5Gvamn4KN4lGBEckPBT0="
+    udp: true
+    mtu: 1280
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+  # 🇺🇸 آمریکا - میامی
+  - name: "🇺🇸 USA - Miami"
+    type: wireguard
+    server: 166.88.27.61
+    port: 20769
+    ip: 10.247.136.26/16
+    private-key: "lvw7tqEsp/c1FPyqYqzqD8cOBO75NqSzhXX6v1axEU4="
+    public-key: "AeTspgvJ0KXSEnec7uIZ3ZrEHYu2csp9s2mFdRz/eGA="
+    udp: true
+    mtu: 1280
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+  # 🇫🇷 فرانسه - گراولینس
+  - name: "🇫🇷 France - Gravelines"
+    type: wireguard
+    server: 51.255.0.155
+    port: 60913
+    ip: 10.175.205.82/16
+    private-key: "uFC01bgAayVn8rXelDIGiOMAm/peh015J746dYCjJFg="
+    public-key: "30iX73aGD7yNqJkxMPuDux5O1unmJxg6Cu3A8YPcUj8="
+    udp: true
+    mtu: 1280
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+  # 🇧🇬 بلغارستان
+  - name: "🇧🇬 Bulgaria - Sofia"
+    type: wireguard
+    server: 185.148.147.144
+    port: 23956
+    ip: 10.237.241.154/16
+    private-key: "odtnDSq+n6baWgkiKBxh+sVSPKtLDPjywpN+pmnRhJM="
+    public-key: "t7soegCVyAWLNZq/HZrwcjJsuRb8M6GtqWVWckh0zVk="
+    udp: true
+    mtu: 1280
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+  # 🇳🇱 هلند (قبلی)
+  - name: "🇳🇱 Netherlands"
+    type: wireguard
+    server: 181.214.124.116
+    port: 64310
+    ip: 10.246.114.242/16
+    private-key: "haKiRI6EIo6YdYw+YTFnQSchNwLJwNs5bn/KysngkgE="
+    public-key: "GuQIAfUSKHk7NbftFVJzqJuDhLTV0vFEk9aoi4rpIDs="
+    udp: true
+    mtu: 1280
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+  # 🇩🇪 آلمان (قبلی)
+  - name: "🇩🇪 Germany"
+    type: wireguard
+    server: 51.77.89.49
+    port: 49640
+    ip: 10.200.20.202/16
+    private-key: "VJ0Hbn45BfkYKmmhJexGGR00lEYx2H2M+7U/mvga4Ek="
+    public-key: "Rt4ccxMsI6Lnk0SjsPkpDMU8U3yeNO4yGTFr+AhzECQ="
+    udp: true
+    mtu: 10240
+    dns:
+      - 1.1.1.1
+    keepalive-interval: 15
+    remote-dns-resolve: true
+    mux:
+      concurrency: 10
+      enabled: true
+      xudp-concurrency: 10
+      xudp-proxy-udp-443: allow
+
+proxy-groups:
+  - name: "🌍 SELECT SERVER"
+    type: select
+    proxies:
+      - "🇺🇸 USA - Las Vegas"
+      - "🇺🇸 USA - New York"
+      - "🇺🇸 USA - Miami"
+      - "🇫🇷 France - Gravelines"
+      - "🇧🇬 Bulgaria - Sofia"
+      - "🇳🇱 Netherlands"
+      - "🇩🇪 Germany"
+
+rules:
+  - "MATCH,🌍 SELECT SERVER"
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - "any:53"
