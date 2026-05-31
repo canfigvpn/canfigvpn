@@ -1,0 +1,183 @@
+{
+  "dns": {
+    "independent_cache": true,
+    "servers": [
+      {
+        "address": "1.1.1.1",
+        "tag": "dns-remote"
+      },
+      {
+        "address": "local",
+        "detour": "direct",
+        "tag": "dns-local"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "listen_port": 6450,
+      "override_address": "1.1.1.1",
+      "override_port": 53,
+      "tag": "dns-in",
+      "type": "direct"
+    },
+    {
+      "domain_strategy": "ipv4_only",
+      "endpoint_independent_nat": true,
+      "mtu": 1280,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "stack": "system",
+      "tag": "tun-in",
+      "type": "tun"
+    },
+    {
+      "listen": "127.0.0.1",
+      "listen_port": 10808,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "tag": "mixed-in",
+      "type": "mixed"
+    }
+  ],
+  "log": {
+    "level": "info"
+  },
+  "outbounds": [
+    {
+      "type": "wireguard",
+      "tag": "🇺🇸 USA - Las Vegas",
+      "server": "104.243.33.207",
+      "server_port": 40496,
+      "local_address": ["10.230.14.182/30"],
+      "private_key": "gLu+G/TYel5lu+TUSRFSprwp6vzN/vrfPHITfkmv0wM=",
+      "peer_public_key": "WBCvF75WJP1FLXzIvSvXsc3MvQ/jw8r9iEh99z6SgwQ=",
+      "mtu": 1280,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇺🇸 USA - New York",
+      "server": "104.128.72.21",
+      "server_port": 11547,
+      "local_address": ["10.223.15.74/30"],
+      "private_key": "xqH7L4WLl2JAC82jTrcH7TdtvBwQC5yxjMZdoVbqRcU=",
+      "peer_public_key": "McfgxW5DYUaUio0nSFpOyVC5Gvamn4KN4lGBEckPBT0=",
+      "mtu": 1280,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇺🇸 USA - Miami",
+      "server": "166.88.27.61",
+      "server_port": 20769,
+      "local_address": ["10.247.136.26/30"],
+      "private_key": "lvw7tqEsp/c1FPyqYqzqD8cOBO75NqSzhXX6v1axEU4=",
+      "peer_public_key": "AeTspgvJ0KXSEnec7uIZ3ZrEHYu2csp9s2mFdRz/eGA=",
+      "mtu": 1280,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇫🇷 France - Gravelines",
+      "server": "51.255.0.155",
+      "server_port": 60913,
+      "local_address": ["10.175.205.82/30"],
+      "private_key": "uFC01bgAayVn8rXelDIGiOMAm/peh015J746dYCjJFg=",
+      "peer_public_key": "30iX73aGD7yNqJkxMPuDux5O1unmJxg6Cu3A8YPcUj8=",
+      "mtu": 1280,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇧🇬 Bulgaria - Sofia",
+      "server": "185.148.147.144",
+      "server_port": 23956,
+      "local_address": ["10.237.241.154/30"],
+      "private_key": "odtnDSq+n6baWgkiKBxh+sVSPKtLDPjywpN+pmnRhJM=",
+      "peer_public_key": "t7soegCVyAWLNZq/HZrwcjJsuRb8M6GtqWVWckh0zVk=",
+      "mtu": 1280,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇳🇱 Netherlands",
+      "server": "181.214.124.116",
+      "server_port": 64310,
+      "local_address": ["10.246.114.242/30"],
+      "private_key": "haKiRI6EIo6YdYw+YTFnQSchNwLJwNs5bn/KysngkgE=",
+      "peer_public_key": "GuQIAfUSKHk7NbftFVJzqJuDhLTV0vFEk9aoi4rpIDs=",
+      "mtu": 1280,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇩🇪 Germany",
+      "server": "51.77.89.49",
+      "server_port": 49640,
+      "local_address": ["10.200.20.202/30"],
+      "private_key": "VJ0Hbn45BfkYKmmhJexGGR00lEYx2H2M+7U/mvga4Ek=",
+      "peer_public_key": "Rt4ccxMsI6Lnk0SjsPkpDMU8U3yeNO4yGTFr+AhzECQ=",
+      "mtu": 10240,
+      "keepalive_interval": 15,
+      "dns": ["1.1.1.1"]
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "🇺🇸 USA - Las Vegas",
+        "🇺🇸 USA - New York",
+        "🇺🇸 USA - Miami",
+        "🇫🇷 France - Gravelines",
+        "🇧🇬 Bulgaria - Sofia",
+        "🇳🇱 Netherlands",
+        "🇩🇪 Germany",
+        "direct"
+      ]
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:16756"
+    }
+  }
+}
